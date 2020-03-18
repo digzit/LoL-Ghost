@@ -24,6 +24,8 @@ Build for OSX
 Build for Windows
 
     yarn electron-pack-win
+    
+Then you cna find your apps on the /dist folder
 
 
 
