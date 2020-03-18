@@ -39,10 +39,9 @@
 		"test": "react-scripts test",
 		"electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
 		"postinstall": "electron-builder install-app-deps",
-		"preelectron-pack": "yarn build",
-		"electron-pack-all": "electron-builder build -mw",
-		"electron-pack-osx": "electron-builder build -m",
-		"electron-pack-win": "electron-builder build -w"
+		"electron-pack-all": "yarn build && electron-builder build -mw",
+		"electron-pack-osx": "yarn build && electron-builder build -m",
+		"electron-pack-win": "yarn build && electron-builder build -w"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
