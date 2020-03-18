@@ -1,73 +1,75 @@
 {
-  "name": "lolghost",
-  "version": "1.0.0",
-  "description": "Become a ghost for your friends list on League of Legends",
-  "author": {
-    "name": "Aurélien Digout",
-    "email": "aurelien.digout@gmail.com",
-    "url": "https://github.com/digzit"
-  },
-  "private": true,
-  "homepage": "./",
-  "main": "public/electron.js",
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "concurrently": "^5.1.0",
-    "electron-is-dev": "^1.1.0",
-    "fs-extra": "^8.1.0",
-    "got": "^10.6.0",
-    "lcu-connector": "^2.1.3",
-    "nodemon": "^2.0.2",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-scripts": "3.4.0",
-    "socket.io": "^2.3.0",
-    "wait-on": "^4.0.1",
-    "yaml": "^1.8.2"
-  },
-  "devDependencies": {
-    "@rescripts/cli": "^0.0.14",
-    "@rescripts/rescript-env": "^0.0.12",
-    "electron": "^8.1.1",
-    "electron-builder": "^22.4.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
-    "postinstall": "electron-builder install-app-deps",
-    "preelectron-pack": "yarn build",
-    "electron-pack": "electron-builder build -mw"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "build": {
-    "appId": "com.example.electron-cra",
-    "productName": "LoL Ghost",
-    "copyright": "Copyright © 2020 ${author}",
-    "icon": "./icon.ico",
-    "files": [
-      "build/**/*",
-      "node_modules/**/*"
-    ],
-    "directories": {
-      "buildResources": "assets"
-    }
-  }
+	"name": "lolghost",
+	"version": "1.0.0",
+	"description": "Become a ghost for your friends list on League of Legends",
+	"author": {
+		"name": "Aurélien Digout",
+		"email": "aurelien.digout@gmail.com",
+		"url": "https://github.com/digzit"
+	},
+	"private": true,
+	"homepage": "./",
+	"main": "public/electron.js",
+	"dependencies": {
+		"@testing-library/jest-dom": "^4.2.4",
+		"@testing-library/react": "^9.3.2",
+		"@testing-library/user-event": "^7.1.2",
+		"concurrently": "^5.1.0",
+		"electron-is-dev": "^1.1.0",
+		"fs-extra": "^8.1.0",
+		"got": "^10.6.0",
+		"lcu-connector": "^2.1.3",
+		"nodemon": "^2.0.2",
+		"react": "^16.13.0",
+		"react-dom": "^16.13.0",
+		"react-scripts": "3.4.0",
+		"socket.io": "^2.3.0",
+		"wait-on": "^4.0.1",
+		"yaml": "^1.8.2"
+	},
+	"devDependencies": {
+		"@rescripts/cli": "^0.0.14",
+		"@rescripts/rescript-env": "^0.0.12",
+		"electron": "^8.1.1",
+		"electron-builder": "^22.4.1"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+		"postinstall": "electron-builder install-app-deps",
+		"preelectron-pack": "yarn build",
+		"electron-pack-all": "electron-builder build -mw",
+		"electron-pack-osx": "electron-builder build -m",
+		"electron-pack-win": "electron-builder build -w"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"build": {
+		"appId": "com.example.electron-cra",
+		"productName": "LoL Ghost",
+		"copyright": "Copyright © 2020 ${author}",
+		"icon": "./icon.ico",
+		"files": [
+			"build/**/*",
+			"node_modules/**/*"
+		],
+		"directories": {
+			"buildResources": "assets"
+		}
+	}
 }
