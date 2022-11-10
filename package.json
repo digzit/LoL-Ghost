@@ -30,7 +30,7 @@
 	"devDependencies": {
 		"@rescripts/cli": "^0.0.14",
 		"@rescripts/rescript-env": "^0.0.12",
-		"electron": "^8.1.1",
+		"electron": "^18.3.7",
 		"electron-builder": "^22.4.1"
 	},
 	"scripts": {
